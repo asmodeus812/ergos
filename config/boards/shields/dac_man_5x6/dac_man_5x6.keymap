@@ -16,8 +16,8 @@
 &kp ESC     &kp A      &kp S     &kp D      &kp F      &kp G    &kp LEFT               &kp DOWN    &kp H      &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
 &kp LSHIFT  &kp Z      &kp X     &kp C      &kp V      &kp B                                       &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp LSHIFT
 &mo LOWER   &kp LGUI   &kp PG_UP &kp PG_DN                                                                               &kp LBKT   &kp RBKT   &kp RGUI       &mo RAISE
-                                            &kp SPACE &kp LCTRL &kp DEL                &kp ENTER  &kc RCTRL   &kp BSPC   
-                                                      &kp LALT  &kp HOME               &kp END    &kc RALT
+                                            &kp SPACE &kp LCTRL &kp DEL                &kp ENTER  &kp RCTRL   &kp BSPC   
+                                                      &kp LALT  &kp HOME               &kp END    &kp RALT
             >;
         };
         raise {
