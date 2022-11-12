@@ -21,12 +21,12 @@
         };
         raise {
             bindings = <
-&none   &kp F1   &kp F2   &kp F3    &kp F4    &kp F5  &kp F6       &kp F7       &kp F8     &kp F9     &kp F10    &kp F11    &kp F12    &none
-&none   &none    &none    &none     &none     &none   &C_NEXT      &C_VOL_UP 5  &none      &none      &none      &none      &none      &none
-&none   &none    &none    &none     &none     &none   &C_PREV      &C_VOL_DN 5  &none      &none      &none      &none      &none      &none
-&none   &none    &none    &none     &none     &none                             &none      &none      &none      &none      &none      &none
-&none   &none    &none    &none     &none     &none   &none        &none        &none      &none      &none      &none      &none      &none
-                                              &none   &none        &none        &none
+&none   &kp F1   &kp F2   &kp F3    &kp F4    &kp F5  &kp F6       &kp F7           &kp F8     &kp F9     &kp F10    &kp F11    &kp F12    &none
+&none   &none    &none    &none     &none     &none   &kp C_NEXT   &kp C_VOL_UP     &none      &none      &none      &none      &none      &none
+&none   &none    &none    &none     &none     &none   &kp C_PREV   &kp C_VOL_DN     &none      &none      &none      &none      &none      &none
+&none   &none    &none    &none     &none     &none                                 &none      &none      &none      &none      &none      &none
+&none   &none    &none    &none     &none     &none   &none        &none            &none      &none      &none      &none      &none      &none
+                                              &none   &none        &none            &none
             >;
         };
         lower {
