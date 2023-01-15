@@ -21,7 +21,7 @@
         };
         raise {
             bindings = <
-&kp C_PP  &kp F1         &kp F2                 &kp F3               &kp F4           &kp none              &kp none        &kp F7      &kp F6     &kp F7     &kp F8        &kp F9          &kp F10        &kp C_MUTE
+&kp C_PP  &kp F1         &kp F2                 &kp F3               &kp F4           &none                 &none         &kp F7        &kp F6     &kp F7     &kp F8        &kp F9           &kp F10        &kp C_MUTE
 &none     &kp C_AC_EXIT  &kp C_AL_MY_COMPUTER   &kp C_AL_TEXT_EDITOR &kp C_AC_REFRESH &kp C_AL_TASK_MANAGER &kp C_NEXT    &kp C_VOL_UP  &none      &none      &kp C_AC_INS  &kp C_AC_OPEN    &kp C_AC_PROPS &none
 &none     &kp C_AC_NEW   &kp C_AL_SELECT_TASK   &kp C_AL_DOCS        &kp C_AL_FILES   &kp C_AC_GOTO         &kp C_PREV    &kp C_VOL_DN  &kp LEFT   &kp DOWN   &kp UP        &kp RIGHT        &none          &none
 &none     &kp C_AC_ZOOM  &kp C_AL_CONTROL_PANEL &kp C_AL_CALC        &none            &kp C_AL_WWW                                      &none      &none      &kp C_RW      &kp C_FF         &kp C_AC_FIND  &none
