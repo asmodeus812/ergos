@@ -11,12 +11,12 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-&kp EQUAL   &kp N1     &kp N2    &kp N3     &kp N4     &kp N5   &mo LOWER  &mo LOWER   &kp N6     &kp N7     &kp N8     &kp N9     &kp N0         &kp MINUS
-&caps_word  &kp Q      &kp W     &kp E      &kp R      &kp T    &kp RIGHT  &kp UP      &kp Y      &kp U      &kp I      &kp O      &kp P          &kp DEL
-&kp TAB     &kp A      &kp S     &kp D      &kp F      &kp G    &kp LEFT   &kp DOWN    &kp H      &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
-&kp LSHIFT  &kp Z      &kp X     &kp C      &kp V      &kp B                           &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RSHIFT
-&mo RAISE   &kp LGUI   &kp GRAVE &kp BSLSH  &kp SPACE  &kp LCTRL &kp ESC   &kp ENTER  &kp RCTRL   &kp BSPC   &kp LBKT   &kp RBKT   &kp RGUI       &mo RAISE
-                                                       &kp LALT  &kp HOME  &kp END    &kp RALT
+&kp EQUAL   &kp N1     &kp N2    &kp N3     &kp N4     &kp N5    &mo LOWER  &mo LOWER   &kp N6     &kp N7     &kp N8     &kp N9     &kp N0         &kp MINUS
+&caps_word  &kp Q      &kp W     &kp E      &kp R      &kp T     &kp RIGHT  &kp UP      &kp Y      &kp U      &kp I      &kp O      &kp P          &kp DEL
+&kp TAB     &kp A      &kp S     &kp D      &kp F      &kp G     &kp LEFT   &kp DOWN    &kp H      &kp J      &kp K      &kp L      &kp SEMI       &kp SQT
+&kp LSHIFT  &kp Z      &kp X     &kp C      &kp V      &kp B                            &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH       &kp RSHIFT
+&mo RAISE   &kp LGUI   &kp GRAVE &kp BSLSH  &kp SPACE  &kp LCTRL &kp ESC    &kp ENTER   &kp RCTRL  &kp BSPC   &kp LBKT   &kp RBKT   &kp RGUI       &mo RAISE
+                                                       &kp LALT  &kp HOME   &kp END     &kp RALT
             >;
         };
         raise {
