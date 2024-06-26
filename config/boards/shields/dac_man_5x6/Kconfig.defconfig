@@ -1,7 +1,7 @@
 if SHIELD_DAC_MAN_5X6_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Dactyl L"
+    default "Ergo-S L"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
@@ -10,7 +10,7 @@ endif
 if SHIELD_DAC_MAN_5X6_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "Dactyl R"
+    default "Ergo-S R"
 endif
 
 if SHIELD_DAC_MAN_5X6_LEFT || SHIELD_DAC_MAN_5X6_RIGHT
