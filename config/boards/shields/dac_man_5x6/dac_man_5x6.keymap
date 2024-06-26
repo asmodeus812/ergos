@@ -45,17 +45,16 @@
 
     keymap {
         compatible = "zmk,keymap";
+
         default_layer {
             bindings = <
-                &kp PSCRN  &kp N1      &kp N2    &kp N3   &kp  N4      &kp N5                                                           &kp N6    &kp  N7      &kp N8    &kp N9   &kp N0     &kp PSCRN
-                &kp CAPS   &kp Q       &kp W     &kp E    &kp  R       &kp T                                                            &kp Y     &kp  U       &kp I     &kp O    &kp P      &kp DEL
-                &kp TAB    &kp A       &kp S     &kp D    &hmt LSHFT F &kp G                                                            &kp H     &hmt LSHFT J &kp K     &kp L    &kp SEMI   &kp SQT
-                &kp LSHFT  &kp Z       &kp X     &kp C    &kp  V       &kp B     &hmt LALT TAB &hmc LGUI 0 &hmt LGUI DEL &hmt RALT SQT  &kp N     &kp M        &kp COMMA &kp DOT  &kp FSLH   &kp RSHFT
-                &mo 4      &kp LGUI    &kp GRAVE &kp BSLH &kp  EQUAL   &kp SPACE &hm LCTRL ESC &hmo 3 HOME &hmo 2 PG_UP &hm RCTRL ENTER &kp BSPC  &kp MINUS    &kp LBKT  &kp RBKT &kp RGUI   &mo 4
-                                                                       &hmo 1 END                                                       &hmo 1 PG_DN
+                &kp PSCRN  &kp N1      &kp N2    &kp N3   &kp  N4      &kp N5                                                                 &kp N6    &kp  N7      &kp N8    &kp N9   &kp N0     &kp PSCRN
+                &kp CAPS   &kp Q       &kp W     &kp E    &kp  R       &kp T                                                                  &kp Y     &kp  U       &kp I     &kp O    &kp P      &kp DEL
+                &kp TAB    &kp A       &kp S     &kp D    &hmt LSHFT F &kp G                                                                  &kp H     &hmt LSHFT J &kp K     &kp L    &kp SEMI   &kp SQT
+                &kp LSHFT  &kp Z       &kp X     &kp C    &kp  V       &kp B     &hmt LALT TAB &hmc LGUI 0      &hmt LGUI DEL &hmt RALT SQT   &kp N     &kp M        &kp COMMA &kp DOT  &kp FSLH   &kp RSHFT
+                           &kp LGUI    &kp GRAVE &kp BSLH &kp  EQUAL   &kp SPACE &hm LCTRL ESC &hmo 3 HOME      &hmo 2 PG_UP  &hm RCTRL ENTER &kp BSPC  &kp MINUS    &kp LBKT  &kp RBKT &kp RGUI
+                                                                                               &hmo 1 END       &hmo 1 PG_DN
             >;
         };
    };
 };
-
-

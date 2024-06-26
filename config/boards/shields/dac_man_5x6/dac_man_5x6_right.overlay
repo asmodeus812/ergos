@@ -1,7 +1,7 @@
 #include "dac_man_5x6.dtsi"
 
 &default_transform {
-    col-offset = <7>;
+    col-offset = <8>;
 };
 
 &kscan0 {
