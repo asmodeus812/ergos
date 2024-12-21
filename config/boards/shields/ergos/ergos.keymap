@@ -65,9 +65,6 @@
 
 / {
     behaviors {
-        #include "macros.dtsi"
-        #include "version.dtsi"
-
         HML(hmo, "LAYER_HOLD", 200, KEYS_NONE)
         HMH(hmlr, "LAYER_TAP_LEFT", 150, KEYS_NONE)
         HMH(hmll, "LAYER_TAP_RIGHT", 150, KEYS_NONE)
