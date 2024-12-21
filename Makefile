@@ -21,19 +21,6 @@ all:
 		-e COMMIT=$(COMMIT) \
 		-e BUILD_RIGHT=true \
 		zmk
-	git checkout config/version.dtsi
-
-left:
-	$(shell bin/get_version.sh >> /dev/null)
-	$(DOCKER) build --tag zmk --file Dockerfile .
-	$(DOCKER) run --rm -it --name zmk \
-		-v $(PWD)/firmware:/app/firmware$(SELINUX1) \
-		-v $(PWD)/config:/app/config:ro$(SELINUX2) \
-		-e TIMESTAMP=$(TIMESTAMP) \
-		-e COMMIT=$(COMMIT) \
-		-e BUILD_RIGHT=false \
-		zmk
-	git checkout config/version.dtsi
 
 clean_firmware:
 	rm -f firmware/*.uf2
