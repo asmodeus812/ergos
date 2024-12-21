@@ -36,18 +36,19 @@
         hold-trigger-key-positions = <KEYS>; \
     };
 
-#define HMH(ID, NAME, TERM) \
-    ID: mod_hold_##ID { \
+#define HMH(ID, NAME, TERM, KEYS) \
+    ID: layer_tap_##ID { \
         compatible = "zmk,behavior-hold-tap"; \
         label = NAME; \
-        #binding-cells = <2>; \
         tapping-term-ms = <TERM>; \
-        flavor = "hold-preferred"; \
-        bindings = <&kp>, <&kp>; \
+        flavor = "tap-preferred"; \
+        #binding-cells = <2>; \
+        bindings = <&mo>, <&kp>; \
+        hold-trigger-key-positions = <KEYS>; \
     };
 
-#define HML(ID, NAME, TERM) \
-    ID: mod_layer_##ID { \
+#define HML(ID, NAME, TERM, KEYS) \
+    ID: layer_hold_##ID { \
         compatible = "zmk,behavior-hold-tap"; \
         label = NAME; \
         #binding-cells = <2>; \
@@ -55,12 +56,21 @@
         tapping-term-ms = <TERM>; \
         flavor = "hold-preferred"; \
         bindings = <&mo>, <&kp>; \
+        hold-trigger-key-positions = <KEYS>; \
     };
+
+&caps_word {
+    continue-list = <UNDERSCORE SEMI PIPE AMPS MINUS BACKSPACE DELETE LSHFT RSHFT>;
+};
 
 / {
     behaviors {
-        HMH(hmh, "MODS_HOLD", 200)
-        HML(hmo, "MODS_LAYER", 200)
+        #include "macros.dtsi"
+        #include "version.dtsi"
+
+        HML(hmo, "LAYER_HOLD", 200, KEYS_NONE)
+        HMH(hmlr, "LAYER_TAP_LEFT", 150, KEYS_NONE)
+        HMH(hmll, "LAYER_TAP_RIGHT", 150, KEYS_NONE)
 
         HMT(hmt, "MODS_THUMB", 150, KEYS_NONE)
         HMT(hmr, "MODS_RIGHT", 150, KEYS_LEFT THUMBS_LEFT)
@@ -87,18 +97,18 @@
                 &kp PSCRN  &kp N1      &kp N2    &kp N3   &kp  N4      &kp N5                                                               &kp N6    &kp  N7      &kp N8    &kp N9   &kp N0        &kp PSCRN
                 &kp CAPS   &kp Q       &kp W     &kp E    &kp  R       &kp T                                                                &kp Y     &kp  U       &kp I     &kp O    &kp P         &kp DEL
                 &kp TAB    &kp A       &kp S     &kp D    &hml LSHFT F &kp G                                                                &kp H     &hmr LSHFT J &kp K     &kp L    &kp SEMI      &kp SQT
-                &kp LSHFT  &kp Z       &kp X     &kp C    &kp  V       &kp B     &hmt LALT  TAB &hmc LGUI 0  &hmt LGUI DEL &hmt RALT  SQT   &kp N     &kp M        &kp COMMA &kp DOT  &kp FSLH      &kp RSHFT
-                           &hmc LGUI 0 &kp GRAVE &kp BSLH &kp  EQUAL   &kp SPACE &hmt LCTRL ESC &hmo 3 HOME  &hmo 2 PG_UP  &hmt RCTRL ENTER &kp BSPC  &kp MINUS    &kp LBKT  &kp RBKT &hmt RGUI DEL
-                                                                                                &hmo 1 END   &hmo 1 PG_DN
+                &kp LSHFT  &kp Z       &kp X     &kp C    &kp  V       &kp B     &hmt LALT  TAB &hmt LGUI CAPS &hmt LGUI DEL &hmt RALT  SQT   &kp N     &kp M        &kp COMMA &kp DOT  &kp FSLH      &kp RSHFT
+                           &caps_word  &kp GRAVE &kp BSLH &kp  EQUAL   &kp SPACE &hmt LCTRL ESC &hmo 3 HOME    &hmo 2 PG_UP  &hmt RCTRL ENTER &kp BSPC  &kp MINUS    &kp LBKT  &kp RBKT &hmt RGUI DEL
+                                                                                                &hmo 1 END     &hmo 1 PG_DN
             >;
         };
         fn {
             bindings = <
-                &trans     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                                          &kp F6    &kp F7     &kp F8     &kp F9    &kp F10   &trans
-                &trans     &trans     &trans     &trans     &trans     &trans                                          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END   &trans    &trans
-                &trans     &trans     &trans     &trans     &trans     &trans                                          &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT &trans    &trans
-                &trans     &trans     &trans     &trans     &trans     &trans    &trans &trans         &trans &trans   &trans    &trans     &trans     &trans    &trans    &trans
-                           &trans     &trans     &trans     &trans     &trans    &trans &trans         &trans &trans   &trans    &trans     &trans     &trans    &trans
+                &kp F11    &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                                          &kp F6     &kp F7     &kp F8     &kp F9      &kp F10     &kp F12
+                &trans     &trans     &trans     &trans     &trans     &trans                                          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END     &kp INS     &none
+                &trans     &trans     &trans     &trans     &trans     &trans                                          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT   &kp SLCK    &none
+                &trans     &trans     &trans     &trans     &trans     &trans    &trans &trans         &trans &trans   &kp K_UNDO &kp K_CUT  &kp K_COPY &kp K_PASTE &kp K_REDO  &none
+                           &trans     &trans     &trans     &trans     &trans    &trans &trans         &trans &trans   &none     &none     &none     &none      &none
                                                                                         &trans         &trans
             >;
         };
